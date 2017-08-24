@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by BenAdlam (http://jsbin.com/cenunoh/13/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
+
+<style id="jsbin-css">
+body {
+  
+  font-family: "Calibri", Georgia, Serif;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
+ul {
+   
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    
+    
+}
+.listContainer  {
+
+  width:100%;
+  text-align: center;
+  position:relative;
+  padding: 0;
+}
+
+li {
+  display:inline-block;
+    text-align: center;
+    border-right:1px  #bbb;
+}
+
+li a {
+    display: block;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+     color: rgba(240,205,200,0.8);
+}
+
+.active {
+    color: rgba(256,100,100,1);
+}
+.listContainer {
+   background-image: url('https://wallpaperscraft.com/image/starry_sky_stars_man_light_glitter_116284_3840x2160.jpg');
+ /* background-image: url('https://static1.squarespace.com/static/53ac5f13e4b0c4e738760606/5818f2eee6f2e10d0e725a04/58192816d1758e1ed5af8456/1478047326405/356A5897-2.jpg');*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow:hidden;
+
+}
+.listContainer ul {
+  text-align:center;
+  display: inline-block;
+  
+}
+
+
+.iconContainer {
+  text-align:center;
+  vertical-align: middle;
+  
+}
+.title { 
+
+  width: 100%;
+  text-align: center;
+  color:white;
+  position: relative;
+  font-weight: normal;
+  font-size: 40px;
+  margin:0;
+  display: inline;
+  border: 5px solid white;
+  
+  
+}
+.wholeContainer {
+  position: relative;
+  
+}
+#logo {
+  
+  background-color:white;
+    padding:0;
+    margin:0;
+}
+head {
+  padding:0;
+  margin:0;
+}
+.topMessage {
+  text-align:center;
+  font-size: 70px;
+  color:white;
+  
+}
+#home {
+  background-color: #E3E3E6;
+  overflow: hidden;
+}
+#news {
+  background-color: white;
+    overflow: hidden;
+}
+#contact {
+  background-color: #E3E3E6;
+    overflow: hidden;
+}
+#about {
+  background-color: white;
+    overflow: hidden;
+}
+.icon-background {
+  color: red;
+}
+.anchorNoVisual {
+  text-decoration: none;
+  color:black;
+}
+
+
+
+.sk-circle-grid .sk-circle {
+  margin-right: 1px;
+  margin-bottom: 1px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.5s infinite ease-in-out;
+
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(1, 0, 0);
+            transform: scale3D(1, 0, 0); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+</style>
+</head>
+<body>
+   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  
+    <div class="wholeContainer">
+<div class="listContainer" id="logo"> 
+  <ul >
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">Projects</a></li>
+    <li><a style="font-size:45px" class="active benAdlam" href="#logo">Ben Adlam</a></li>
+    <li><a href="#contact">Contact</a></li>
+
+    
+    <li style=""><a href="#about">About</a></li>
+  </ul>
+  <br />
+ <div class="title">&nbsp Software Developer &nbsp</div>
+  <br/>
+  <br/>
+</div>
+
+
+  <div id="" class="content">
+   
+
+      <a href="#logo" class="anchorNoVisual">
+    <div id="home" >
+      <div class="iconContainer">
+        <span class="fa-2x">
+          <i style="display:inline-block;" class="fa fa-long-arrow-left"></i>
+      <span class="fa-stack">
+        
+          <i style="display:inline-block;" class="fa fa-circle fa-stack-2x"></i>
+        
+          <i style="display:inline-block; color:white;" class="fa fa-home fa-stack-1x" ></i>
+      </span>
+          <i style="display:inline-block;" class="fa fa-long-arrow-right"></i>
+          </span>
+    </div>
+      </a>
+
+        
+    <br />
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+            <br />
+  
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+            <br />
+  
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+      
+      
+    </div>
+    <div id="news">
+      <a href="#logo" class="anchorNoVisual">
+          <div class="iconContainer">
+        <span class="fa-2x">
+          <i style="display:inline-block;" class="fa fa-long-arrow-left"></i>
+      <span class="fa-stack">
+        
+          <i style="display:inline-block;" class="fa fa-circle fa-stack-2x"></i>
+        
+          <i style="display:inline-block; color:white;" class="fa fa-file-text-o fa-stack-1x" ></i>
+      </span>
+          <i style="display:inline-block;" class="fa fa-long-arrow-right"></i>
+          </span>
+    </div>
+      </a>
+        <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+      
+      
+    </div>
+    <div id="contact">
+      <a href="#logo" class="anchorNoVisual">
+          <div class="iconContainer">
+        <span class="fa-2x">
+          <i style="display:inline-block;" class="fa fa-long-arrow-left"></i>
+      <span class="fa-stack">
+        
+          <i style="display:inline-block;" class="fa fa-circle fa-stack-2x"></i>
+        
+          <i style="display:inline-block; color:white;" class="fa fa-address-book fa-stack-1x" ></i>
+      </span>
+          <i style="display:inline-block;" class="fa fa-long-arrow-right"></i>
+          </span>
+    </div>
+      </a>
+              <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br 
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+                <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+      
+    </div>
+    <div id="about">
+      <a href="#logo" class="anchorNoVisual">
+            <div class="iconContainer">
+        <span class="fa-2x">
+          <i style="display:inline-block;" class="fa fa-long-arrow-left"></i>
+      <span class="fa-stack">
+        
+          <i style="display:inline-block;" class="fa fa-circle fa-stack-2x"></i>
+        
+          <i style="display:inline-block; color:white;" class="fa fa-info fa-stack-1x" ></i>
+      </span>
+          <i style="display:inline-block;" class="fa fa-long-arrow-right"></i>
+          </span>
+    </div>
+        </a>
+            <h2 style="text-align:center;font-size: 100px;">ROB IS GAYYYYYY</h2>
+        <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+         <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+      
+  </div>  
+<div>
+     <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+      
+  </div>  
+<div>
+     <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+          <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+      
+  </div>  
+<div>
+    <br />
+    <br />
+
+
+
+      
+  </div>  
+<div>
+  
+  
+  
+
+<script id="jsbin-javascript">
+$(document).ready(function () {
+  
+  CreateLoadAnimation(".animationContainer","sk-circle-grid", "sk-circle", 3, 0.2);
+  
+$("body").on("click", "li a", function (e) {
+  $(".active").each(function (p) {
+    $(this).removeClass("active");
+   
+  })
+  $(this).addClass("active");
+                   
+})
+
+$("body").on("click", ".anchorNoVisual", function (e) {
+   $(".active").each(function (p) {
+    $(this).removeClass("active");
+   
+  })
+   $(".benAdlam").addClass("active");
+});
+
+//$("body").on("click", ".anchorNoVisual", function (e) {
+//  $(".listContainer ul li").each(function (w) {
+//    $(this).removeClass("active");
+//  })
+//  
+//})
+
+$("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+
+
+  function CreateGrid(gridName ,elementName, noOfDots ){
+    var container = "<div class='" + gridName +"'>";
+    var start = "<div class='" + elementName +" " + elementName;
+    var end = "'>";
+    var containerClose = "</div>";
+    var htmlString = container;
+    var numOfDots = noOfDots;
+
+    $("."+gridName + " ." + elementName).css({"-webkit-animation" : "sk-cubeGridScaleDelay " + "1.5s " +"infinite ease-in-out;"});
+    
+    for(var i = 0; i < numOfDots; i++ ) {
+      htmlString += (start + i + end + containerClose)
+    }
+    htmlString += containerClose;
+    //+ start + 1 + end
+    //+ containerClose;
+    return htmlString;
+
+  }
+  
+  
+  function CreateLoadAnimation (containerDiv, gridName ,elementName, noOfDots, timeIncrement) {
+    var htmlString = CreateGrid(gridName, elementName, noOfDots);
+    $(containerDiv).html(htmlString);
+    var timeInc = timeIncrement;
+    var count = 0;
+    var count2 = 0;
+    $("." +elementName).each( function () {
+      count += timeInc;
+  
+      $("."+elementName + count2).css({"animation-delay" : count + "s"});
+      count2++;
+      //alert(t)
+    })
+  }
+  
+  
+
+  function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+$("div.sk-circle").hover(function() {
+  $(this).css("background-color",getRandomColor())
+});
+  });
+
+
+</script>
+</body>
+</html>
